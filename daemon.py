@@ -6,11 +6,12 @@ import time
 import logging
 
 async def handle(request):
-    name =  request.match_info.get('name', "Anonymous"   text = "Hello, "+name)
+    name =  request.match_info.get('name', "Anonymous")
+    text = "Hello, "+name
     return web.Response(text=text)
-# async def get_file(loop):
+#async def get_file(loop):
 
-async def init(loop, host, port):dsfsdf
+async def init(loop, host, port):
     app=web.Application()
     app.add_routes([web.get('/', handle), web.get('/{name}', handle)]), 
     srv = await loop.create_server(app._make_handler(), host, port )
@@ -19,8 +20,13 @@ async def init(loop, host, port):dsfsdf
 
 logging.basicConfig(level=logging.DEBUG)
 loop= asyncio.get_event_loop()
-loop.run_until_complete(init(loop, '127.0.0.1', 66666))
+loop.run_until_complete(init(loop, '127.0.0.1', 6666))
 try: 
     loop.run_forever()
 except KeyboardInterrupt:
     pass
+#dsfdfsfsdf
+#fsdsfsdf
+#fdsfsdfs
+#sdfsdfs
+dsfdfsfsdfdsf
